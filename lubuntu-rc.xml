@@ -542,6 +542,8 @@
     </mousebind>
     <mousebind button="A-Left" action="Click">
       <action name="Unshade"/>
+    </mousebind>
+    <mousebind button="A-Left" action="Drag">
       <action name="Move"/>
     </mousebind>
 
@@ -969,7 +971,7 @@
   </application>
 
   <application name="gpicview">
-	  <fullscreen>true</fullscreen>
+    <fullscreen>true</fullscreen>
   </application>
 
 </applications>

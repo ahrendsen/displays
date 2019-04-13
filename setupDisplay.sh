@@ -1,4 +1,3 @@
-
 sudo apt update
 sudo apt install net-tools openssh-server xdotool unclutter curl
 curl https://rclone.org/install.sh | sudo bash
@@ -7,6 +6,8 @@ cat profileAdditions.sh >> $HOME/.profile
 sudo cp 10periodic /etc/apt/apt.conf.d/10periodic
 sudo mv /etc/xdg/autostart/update-notifier.desktop /etc/xdg/autostart/update-notifier.desktop.old
 sudo mv /etc/xdg/autostart/gnome-software-service.desktop /etc/xdg/autostart/gnome-software-service.desktop.old
+sudo mv lubuntu-rc.xml $HOME/.config/openbox/
+openbox --reconfigure
 
 chmod +x boxScript.sh
 chmod +x reload.sh
