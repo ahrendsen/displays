@@ -36,6 +36,11 @@ chmod +x reload.sh
 cp boxScript.sh $HOME/boxScript.sh
 cp reload.sh $HOME/reload.sh
 
+read -a ip -p \
+"Enter the IP Address where the rclone config 
+file is stored and press [Enter]: "
+sudo scp unlphysics2@$ip:rclone.conf /root/.config/rclone/rclone.conf
+
 crontab crontab.txt 
 sudo crontab crontab_root.txt
 
