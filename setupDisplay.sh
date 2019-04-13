@@ -1,13 +1,34 @@
+# Download the latest package lists.
 sudo apt update
+
+# Install some programs we'll need for the displays. 
 sudo apt install net-tools openssh-server xdotool unclutter curl
 curl https://rclone.org/install.sh | sudo bash
+
+# Copy over the auto-login configuration file.
 sudo cp autoLogin.conf /etc/lightdm/lightdm.conf
+
+# Add lines to the profile to be run at boot.
 cat profileAdditions.sh >> $HOME/.profile
+
+# Copies over the apt configuration file that disables auto updates. 
 sudo cp 10periodic /etc/apt/apt.conf.d/10periodic
+
+# Moves other files to a different location to disable auto updates.
 sudo mv /etc/xdg/autostart/update-notifier.desktop /etc/xdg/autostart/update-notifier.desktop.old
 sudo mv /etc/xdg/autostart/gnome-software-service.desktop /etc/xdg/autostart/gnome-software-service.desktop.old
+
+# Copies over the openbox configuration file that allows
+# gpicview to run in fullscreen, then install that config file.
 sudo cp lubuntu-rc.xml $HOME/.config/openbox/lubuntu-rc.xml
 openbox --reconfigure
+
+# Copies the configuration file for gpicview so that the
+# default slide duration is changed to 10.
+sudo cp gpicview.conf $HOME/.config/gpicview/gpicview.conf
+
+# Copies the xfce display power managment file into the proper directory.
+sudo cp xfce4-power-manager.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager
 
 chmod +x boxScript.sh
 chmod +x reload.sh
@@ -29,12 +50,4 @@ echo ""
 echo "  In the window that appears, select the "Display" tab "
 echo "  and drag all sliders to the left so they display 'Never'"
 echo "  and then press the button to turn the settings off"
-echo ""
-echo "Then type 'gpicview' at a terminal to bring up the default"
-echo "image viewer."
-echo ""
-echo "  In the box that appears, right click on the image and "
-echo "  select 'preferences' from the menu. Set the time per slide"
-echo "  to your desired setting. 10 seems to be good."
-echo ""
 echo ""
