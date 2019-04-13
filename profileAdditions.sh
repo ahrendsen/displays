@@ -15,4 +15,5 @@ xset s off && sxet -dpms
 # after waiting 15 seconds for the computer
 # to boot up.
 ###
+export DISPLAY=:0
 sleep 5 && gpicview /home/unlphysics/display --slideshow&
