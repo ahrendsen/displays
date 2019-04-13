@@ -1,1 +1,1 @@
-* * * * * /home/unlphysics/boxScript.sh
+*/30 * * * * /home/unlphysics/boxScript.sh
