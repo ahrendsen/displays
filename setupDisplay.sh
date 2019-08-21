@@ -62,8 +62,10 @@ echo "Installing the crontab file for root..."
 sudo crontab crontab_root.txt
 echo "Installed the crontab file for root!"
 
+echo " "
+echo " "
 echo "Now we setup the box account. First, type the"
-echo "command 'su -c rclone config' at a terminal to"
+echo "command 'su -c "rclone config"' at a terminal to"
 echo "setup the cloud storage account for syncing."
 echo " "
 echo "  Follow the prompts that appear. "
