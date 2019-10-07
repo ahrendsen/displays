@@ -39,3 +39,6 @@ if [ $NUMCHANGEDFILES -gt 0 ]
 	# run its reload script.
 	touch /home/unlphysics/reload
 fi
+
+rm /var/log/journal/*/system-1000*.journal
+rm /var/log/journal/*/user-1000*.journal
