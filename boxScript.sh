@@ -11,7 +11,9 @@ if [ $? -gt 0 ] # The previously run command returned an error
 	then	
 	# Likely we're not connected to the internet, 
 	# we need to reconnect
+	echo "Restarting network manager..."
 	service network-manager restart
+	echo "Network manager restarted!"
 fi
 # Now we should be connected to the internet, record
 # the number of files that have been changed. 
@@ -38,4 +40,6 @@ if [ $NUMCHANGEDFILES -gt 0 ]
 	# have been downloaded and unlphysics should 
 	# run its reload script.
 	touch /home/unlphysics/reload
+else
+	echo "No files changed. Exiting..."
 fi
