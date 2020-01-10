@@ -44,5 +44,7 @@ else
 	echo "No files changed. Exiting..."
 fi
 
+# Automatically removal journal files that tend to take up lots of
+# storage on the system.
 rm /var/log/journal/*/system-1000*.journal
 rm /var/log/journal/*/user-1000*.journal
