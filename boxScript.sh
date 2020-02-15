@@ -44,5 +44,6 @@ else
 	echo "No files changed. Exiting..."
 fi
 
-rm /var/log/journal/*/system-1000*.journal
-rm /var/log/journal/*/user-1000*.journal
+rm /var/log/journal/*/system-1000*.journal*
+rm /var/log/journal/*/system@*.journal*
+rm /var/log/journal/*/user-1000*.journal*
