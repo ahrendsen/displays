@@ -10,7 +10,7 @@ if [ -f reload ]
         export DISPLAY=:0
 
         # Start a new slideshow to display all of the new content.
-        gpicview ~/display --slideshow &
+        gpicview /home/unlphysics/display --slideshow &
 
 	# Remove the reload flag file so that it doesn't 
 	# reload constantly. 
