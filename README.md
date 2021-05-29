@@ -9,14 +9,16 @@ Download git
 
 Download the repository that contains all the files for doing the setup.
 
-git clone https://github.com/ahrendsen/displays
+    git clone https://github.com/ahrendsen/displays
 
 Enter into the displays directory
 
     cd displays
 
 Setup the root password
-sudo passwd
+
+    sudo passwd
+    
 Run the setup script
     
     ./setupDisplay.sh
