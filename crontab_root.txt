@@ -1,1 +1,2 @@
 */30 * * * * /home/unlphysics/boxScript.sh
+0 0 * * * * reboot
